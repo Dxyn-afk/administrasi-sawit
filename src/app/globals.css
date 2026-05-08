@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #090909;
+  --surface: #111111;
+  --card: #181818;
+  --border: #242424;
+  --amber: #F59E0B;
+  --green: #10B981;
+  --red: #EF4444;
+  --text: #F0EDE8;
+  --muted: #6B7280;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #F59E0B44; }
+
+/* Input date appearance */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.6);
+  cursor: pointer;
+}
+
+/* Number input arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 0.4;
+}
+
+/* Focus outline */
+:focus-visible { outline: 2px solid #F59E0B44; outline-offset: 2px; }
+
+/* Smooth transitions */
+* { transition-property: background-color, border-color, color, opacity, transform;
+    transition-duration: 150ms; transition-timing-function: ease; }
+
+/* Font mono for numbers */
+.mono { font-family: 'JetBrains Mono', monospace; }
